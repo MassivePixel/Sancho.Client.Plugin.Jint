@@ -1,0 +1,36 @@
+branches:
+  only:
+    - master
+
+version: 0.1.{build}
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+os: Visual Studio 2015
+install:
+  - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
+
+before_build:
+  nuget restore "src/Sancho.Client.Plugin.Jint.sln"
+
+configuration: Release
+platform: Any CPU
+
+build:
+  parallel: true
+  project: src/Sancho.Client.Plugin.Jint/Sancho.Client.Plugin.Jint.csproj
+  verbosity: minimal
+  
+after_build:
+  - ps: nuget pack src/Sancho.Client.Plugin.Jint/Sancho.Client.Plugin.Jint.csproj -Version $env:APPVEYOR_BUILD_VERSION
+artifacts:
+  - path: '**\Sancho.Client.Plugin.Jint.*.nupkg'
+
+deploy:
+  provider: NuGet
+  api_key:
+    secure: LT8bWnUXsN/QwIft5V3jlpmBFz9k5TXXceJ8j42eHYOD79VJ9jaf+qlxq2vy173K
