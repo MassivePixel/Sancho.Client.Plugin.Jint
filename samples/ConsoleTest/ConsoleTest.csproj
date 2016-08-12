@@ -28,9 +28,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Client">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
     </Reference>
@@ -40,8 +37,11 @@
     <Reference Include="Plugin.Settings.Abstractions">
       <HintPath>..\packages\Xam.Plugins.Settings.2.1.0\lib\net45\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Sancho.Client.Core">
-      <HintPath>..\packages\Sancho.Client.Core.0.1.7\lib\portable45-net45+win8+wp8\Sancho.Client.Core.dll</HintPath>
+      <HintPath>..\packages\Sancho.Client.Core.0.2.9-ci\lib\portable45-net45+win8+wp8\Sancho.Client.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

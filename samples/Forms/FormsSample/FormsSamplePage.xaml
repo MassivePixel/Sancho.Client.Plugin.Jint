@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FormsSample" x:Class="FormsSample.FormsSamplePage">
+
+	<StackLayout x:Name="ContentRoot"
+			Margin="0,100,0,0">
+		<Label x:Name="Info"
+			Text="Welcome to Xamarin Forms!" 
+			VerticalOptions="Center"
+			HorizontalOptions="Start"
+			/>
+		<Button Text="click"
+				Clicked="Handle_Clicked"
+				/>
+	</StackLayout>
+</ContentPage>
