@@ -2,7 +2,7 @@ branches:
   only:
     - master
 
-version: 0.1.{build}
+version: 0.1.{build}-ci
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
