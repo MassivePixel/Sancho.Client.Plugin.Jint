@@ -22,6 +22,9 @@ namespace ConsoleTest
             Console.WriteLine($"{connection.DeviceId} connecting!");
 
             var status = await connection.ConnectAsync();
+            connection.HubConnection.TraceLevel = Microsoft.AspNet.SignalR.Client.TraceLevels.All;
+            connection.HubConnection.TraceWriter = Console.Out;
+
             Console.WriteLine($"connected: {status}");
             Console.WriteLine($"transport: {connection.HubConnection.Transport}");
 
