@@ -41,7 +41,7 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Sancho.Client.Core">
-      <HintPath>..\packages\Sancho.Client.Core.0.2.9-ci\lib\portable45-net45+win8+wp8\Sancho.Client.Core.dll</HintPath>
+      <HintPath>..\packages\Sancho.Client.Core.0.2.0\lib\portable45-net45+win8+wp8\Sancho.Client.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
