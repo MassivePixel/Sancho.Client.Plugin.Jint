@@ -8,6 +8,7 @@ namespace ConsoleTest
     {
         public static void Main(string[] args)
         {
+            Plugin.Settings.CrossSettings.Current.AddOrUpdateValue("hello", 1);
             DoStuff();
 
             Console.ReadKey();
